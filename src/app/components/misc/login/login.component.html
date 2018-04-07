@@ -4,7 +4,10 @@
     <li *ngIf="email.errors.required">required</li>
     <li *ngIf="email.errors.email">not is an email</li>
   </ul>
-  <input type="password" name="password" [(ngModel)]="user.password" required>
+  <input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+  <ul *ngIf="password.errors && password.touched">
+      <li *ngIf="password.errors.required">required</li>
+    </ul>
   <button type="submit" [disabled]="!loginForm.valid">Login</button>
   <p *ngIf="error">{{ error }}</p>  
 </form>

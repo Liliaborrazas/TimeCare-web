@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmitSignupForm()" #signupForm="ngForm">
+  <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required name>
+  <ul *ngIf="name.errors && name.touched">
+      <li *ngIf="name.errors.required">required</li>
+      <li *ngIf="name.errors.name">not is an name</li>
+    </ul>
+  <input type="email" name="email" [(ngModel)]="user.email" #email="ngModel" required email>
+  <ul *ngIf="email.errors && email.touched">
+    <li *ngIf="email.errors.required">required</li>
+    <li *ngIf="email.errors.email">not is an email</li>
+  </ul>
+  <input type="password" name="password" [(ngModel)]="user.password" required>
+  <ul *ngIf="password.errors && password.touched">
+      <li *ngIf="password.errors.required">required</li>
+    </ul>
+  <input type="text" name="role" [(ngModel)]="user.role" #role="ngModel" required role>
+  <ul *ngIf="role.errors && role.touched">
+      <li *ngIf="role.errors.required">required</li>
+      <li *ngIf="role.errors.role">not is an role</li>
+    </ul>
+    <input type="text" name="city" [(ngModel)]="user.city" #city="ngModel" required city>
+    <ul *ngIf="city.errors && city.touched">
+        <li *ngIf="city.errors.required">required</li>
+        <li *ngIf="city.errors.city">not is an city</li>
+      </ul>
+
+  <button type="submit" [disabled]="!signupForm.valid">Signup</button>
+  <p *ngIf="error">{{ error }}</p>  
+</form>
