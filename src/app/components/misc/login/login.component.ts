@@ -1,16 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { User } from '../../../shared/models/user.model';
+import { SessionService } from '../../../shared/services/session.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  user: User = new User();
+  error: string;
 
-  constructor() { }
+  constructor(
+    private sessionService: SessionService) {}
 
-  ngOnInit() {
+  onSubmitLoginForm() {
+    this.sessionService
+      .authenticate(this.user)
+      .subscribe(
+        user => { 
+          console.log('Authenticated');
+        },
+        error => {
+          this.error = error.message;
+        }
+      );
   }
 
 }
