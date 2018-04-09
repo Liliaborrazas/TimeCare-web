@@ -11,12 +11,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { SignupComponent } from './components/misc/signup/signup.component';
 import { routes } from './app.routes';
+import { UsersService } from './shared/services/users.service';
+import { NavbarComponent } from './components/misc/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import { routes } from './app.routes';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ SessionService ],
+  providers: [ SessionService, 
+  UsersService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

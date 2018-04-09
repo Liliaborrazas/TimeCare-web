@@ -1,3 +1,6 @@
+import { UsersService } from '../../../shared/services/users.service';
+import { Router } from '@angular/router';
+import { User } from '../../../shared/models/user.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +8,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent {
+  user: User = new User();
+  apiError: string;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private usersService: UsersService
+  ) {}
 
-  ngOnInit() {
+  onSubmitSignupForm(signupForm) { 
+    this.usersService.create(this.user).subscribe(
+      (user) => {
+        signupForm.reset();
+        this.router.navigate(['/']);
+      },
+      (error) => {
+        this.apiError = error.message;
+      }
+    );
   }
 
 }
