@@ -14,6 +14,8 @@ import { routes } from './app.routes';
 import { UsersService } from './shared/services/users.service';
 import { NavbarComponent } from './components/misc/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormComponent } from './components/event/form/form.component';
+import { ListComponent } from './components/event/list/list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     SignupComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,

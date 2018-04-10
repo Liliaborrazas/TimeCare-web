@@ -17,10 +17,10 @@ export class SignupComponent {
     private usersService: UsersService
   ) {}
 
-  onSubmitSignupForm(signupForm) { 
+  onSubmitSignupForm() { 
     this.usersService.create(this.user).subscribe(
       (user) => {
-        signupForm.reset();
+        this.user = new User();
         this.router.navigate(['/']);
       },
       (error) => {
