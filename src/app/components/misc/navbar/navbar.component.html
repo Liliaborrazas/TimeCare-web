@@ -1,15 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/about']">
         <img src="https://cdn1.iconfinder.com/data/icons/eyes-set/100/eye3-01-128.png" width="40" height="40" alt="">
       </a>
-  <a class="navbar-brand" href="#">Timecare</a>
+  <a class="navbar-brand" [routerLink]="['/about']">Timecare</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['/login']" href="#">Login</a>
       </li>

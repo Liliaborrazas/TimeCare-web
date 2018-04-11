@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/misc/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/event/form/form.component';
 import { ListComponent } from './components/event/list/list.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ListComponent } from './components/event/list/list.component';
     HomeComponent,
     FormComponent,
     ListComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
