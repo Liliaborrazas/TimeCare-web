@@ -21,7 +21,7 @@ export class SignupComponent {
     this.usersService.create(this.user).subscribe(
       (user) => {
         this.user = new User();
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
       },
       (error) => {
         this.apiError = error.message;

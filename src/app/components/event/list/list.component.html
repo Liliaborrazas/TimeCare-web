@@ -1,67 +1,42 @@
-<div class="container">
-    <div class="card-columns">
-  <div class="card">
-    <img class="card-img-top" src="http://diysolarpanelsv.com/images/mom-car-clipart-14.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">evento1</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6OU_Hsr44h7DjudUXnf-j5Pc8XsY21ZvWroMYJArfe7h2e8z" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">evento2</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRww6GKpc2BfSaMdsow0Y-fs-n7FDDvdYoE4C7vJENkF8MJkOQpCg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">evento3</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-    </div>
-  </div>
-  
-  
-  <div class="card">
-    <img class="card-img-top" src="http://diysolarpanelsv.com/images/clipart-mom-with-2-kids-2.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">evento4</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-    </div>
-  </div>
-  
-  
-  <div class="card">
-    <img class="card-img-top" src="http://moziru.com/images/mother-and-baby-clipart-7.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">evento5</h5>
-      <p class="card-text"> card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-    </div>
-  </div>
+<a [routerLink]="['/event/new']">
+  <i class="fa fa-plus"></i>
+</a>
+<div class="row">
+  <div *ngFor="let event of event" class="event col-xs-12 col-sm-3">
 
-  <div class="card">
-      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyyvNOxqejR25yq2pUFHGN0qextaTq6XHh4zUdEEnkgj8Qgzeg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">evento5</h5>
-        <p class="card-text"> card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        <button type="button" class="btn btn-outline-primary btn-block">saber mas...</button>
-      </div>
-    </div>
+
+      <div class="card">
+          <img class="card-img-top" src="http://diysolarpanelsv.com/images/mom-car-clipart-14.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.title }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <ul>
+                <li>
+                    {{ event.price }}
+                </li>
+                <li>
+                    {{ event.days }}
+                </li>
+                <li>
+                   {{ event.startTime }}
+                </li>
+                <li>
+                  {{ event.endTime }}
+          
+                </li>
+                  
+          
+               
+              </ul>
+          
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a [routerLink]="['/event', event.id]">Saber mas... </a>
+          </div>
+        </div>
+
   </div>
-  
 </div>
+
+
+
     

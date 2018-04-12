@@ -1,5 +1,6 @@
+import { GlobalErrorHandlerService } from './shared/services/global-error-handler.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -14,9 +15,10 @@ import { routes } from './app.routes';
 import { UsersService } from './shared/services/users.service';
 import { NavbarComponent } from './components/misc/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { FormComponent } from './components/event/form/form.component';
+import { CreateComponent } from './components/event/create/create.component';
 import { ListComponent } from './components/event/list/list.component';
 import { AboutComponent } from './components/about/about.component';
+import { EventService } from './shared/services/event.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { AboutComponent } from './components/about/about.component';
     SignupComponent,
     NavbarComponent,
     HomeComponent,
-    FormComponent,
+    CreateComponent,
     ListComponent,
     AboutComponent,
   ],
@@ -36,7 +38,11 @@ import { AboutComponent } from './components/about/about.component';
     RouterModule.forRoot(routes)
   ],
   providers: [ SessionService, 
-  UsersService, ],
+  UsersService, EventService,
+  {
+    provide: ErrorHandler,
+    useClass: GlobalErrorHandlerService
+  } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
