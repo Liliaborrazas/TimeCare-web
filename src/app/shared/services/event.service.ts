@@ -26,13 +26,13 @@ export class EventService extends BaseApiService {
   }
 
   create(event: Event): Observable<Event> {
-    return this.http.post(EventService.EVENT_API, JSON.stringify(event), new RequestOptions({ withCredentials: true }))
+    return this.http.post(EventService.EVENT_API, event, new RequestOptions({ withCredentials: true }))
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }
 
   edit(event: Event): Observable<Event> {
-    return this.http.put(EventService.EVENT_API, JSON.stringify(event), new RequestOptions({ withCredentials: true }))
+    return this.http.put(EventService.EVENT_API, event, new RequestOptions({ withCredentials: true }))
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }

@@ -1,42 +1,19 @@
-<a [routerLink]="['/event/new']">
-  <i class="fa fa-plus"></i>
-</a>
-<div class="row">
-  <div *ngFor="let event of event" class="event col-xs-12 col-sm-3">
-
-
-      <div class="card">
-          <img class="card-img-top" src="http://diysolarpanelsv.com/images/mom-car-clipart-14.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{ event.title }}</h5>
-            <p class="card-text">{{ event.description }}</p>
-            <ul>
-                <li>
-                    {{ event.price }}
-                </li>
-                <li>
-                    {{ event.days }}
-                </li>
-                <li>
-                   {{ event.startTime }}
-                </li>
-                <li>
-                  {{ event.endTime }}
-          
-                </li>
-                  
-          
-               
-              </ul>
-          
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <a [routerLink]="['/event', event.id]">Saber mas... </a>
-          </div>
-        </div>
-
+<div class="container">
+    <a [routerLink]="['/event']">
+      <i class="fa fa-plus"></i>
+    </a>
+    <div class="card-columns">
+  <div  *ngFor="let event of event" class="card">
+      <h3> {{ event.title }} </h3>
+      <img [src]="event.image" />
+    <div class="card-body">
+        <p> Description:{{ event.description }} </p>
+        <p> Price: {{ event.price }} </p>
+        <p> Days:{{ event.days }} </p>
+        <p> StartTime: {{ event.startTime }} </p>
+        <p> EndTime: {{ event.endTime }} </p>
+        <a [routerLink]="['/event', event.id]"> Ver mas... </a>
+    </div>
   </div>
-</div>
-
-
-
-    
+  <button type="button" class="btn btn-primary" [routerLink]="['/event/create']"> Create Evento</button>
+  

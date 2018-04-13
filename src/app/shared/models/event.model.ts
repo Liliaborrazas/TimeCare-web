@@ -3,21 +3,8 @@ export class Event {
     description: string;
     price: number;
     days: string;
-    startTime: number;
-    endTime: number;
+    startTime: string;
+    endTime: string;
 }
-
-
-
-
-
-
-
-
-  
-
-  
-   
-
     
    
