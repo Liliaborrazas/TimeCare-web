@@ -1,0 +1,16 @@
+.btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 50%;
+}
+container {
+    margin-top: 20px;
+}
+.text {
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+
+}
