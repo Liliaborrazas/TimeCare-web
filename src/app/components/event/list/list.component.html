@@ -4,7 +4,7 @@
     </a>
     <div class="card-columns">
   <div  *ngFor="let event of event" class="card">
-      <h3> {{ event.title }} </h3>
+      <h3 class="title"> {{ event.title }} </h3>
       <img [src]="event.image" />
     <div class="card-body">
         <p> Description:{{ event.description }} </p>
