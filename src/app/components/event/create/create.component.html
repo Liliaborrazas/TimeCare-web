@@ -4,12 +4,6 @@
      <form (ngSubmit)="onSubmitCreateForm(createForm)" #createForm="ngForm">
 
 
-        <div class="form-group">
-            <img height="300"[src]="event.image" />
-
-          </div>
-
-
        <div class="form-group">
        <label for="title">Title</label>
        <input type="text" class="form-control" name="title" [(ngModel)]="event.title" #title="ngModel" required title>

@@ -16,5 +16,11 @@ container {
 }
 .title {
     font-family:'Patua One', cursive;
+    margin-top: 20px;
 
+}
+.card {
+    background-color:rgb(230,242,252);
+    border-radius: 15%;
+    margin-top: 20px;
 }

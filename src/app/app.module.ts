@@ -4,6 +4,7 @@ import { NgModule, ErrorHandler  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import './rxjs.operators';
 
@@ -20,6 +21,10 @@ import { ListComponent } from './components/event/list/list.component';
 import { AboutComponent } from './components/about/about.component';
 import { EventService } from './shared/services/event.service';
 
+//angular material//
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +38,8 @@ import { EventService } from './shared/services/event.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)

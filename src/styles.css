@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 body {
     background-image: url("https://png.pngtree.com/element_origin_min_pic/16/08/25/2257befafd21af1.jpg")
 
