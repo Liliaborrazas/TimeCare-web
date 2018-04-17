@@ -19,13 +19,14 @@ import { NavbarComponent } from './components/misc/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateComponent } from './components/event/create/create.component';
 import { ListComponent } from './components/event/list/list.component';
-import { AboutComponent } from './components/about/about.component';
+
 import { EventService } from './shared/services/event.service';
 
 //angular material//
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MapsComponent } from './components/maps/maps.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,8 @@ import { MapsComponent } from './components/maps/maps.component';
     HomeComponent,
     CreateComponent,
     ListComponent,
-    AboutComponent,
     MapsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

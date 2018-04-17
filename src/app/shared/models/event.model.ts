@@ -3,6 +3,7 @@ export class Event {
     description: string;
     price: number;
     days: string;
+    creator: Array<string>;
     startTime: string;
     endTime: string;
 }

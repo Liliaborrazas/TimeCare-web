@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Rx';
 import { User } from '../models/user.model';
 import { Http, Headers, RequestOptions } from '@angular/http';
-//import { BaseApiService } from './base-api.service';
+import { BaseApiService } from './base-api.service';
 import { environment } from '../../../environments/environment';
 
 import { Injectable } from '@angular/core';

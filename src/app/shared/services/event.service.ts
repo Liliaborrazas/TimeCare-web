@@ -42,5 +42,19 @@ export class EventService extends BaseApiService {
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }
+ /* buscarEvent(termino:string): Event[] {
+    let eventArr:Event[] = [];
+    termino = termino.toLowerCase();
+    for( let event of this.event ){
+      let title = event.title.toLoweCase();
+      if( title.indexOf(termino) >= 0 ){
+        eventArr.push( event )
+      }
+
+    }
+    return eventArr;
+    
+
+  }*/
 
 }
