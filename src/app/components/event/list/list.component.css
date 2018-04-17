@@ -3,6 +3,7 @@
     justify-content: space-between;
     margin-bottom: 30px;
     width: 50%;
+ 
 }
 container {
     margin-top: 20px;
@@ -26,3 +27,7 @@ container {
     box-shadow: 10px 10px 5px grey;
 
 }
+button {
+    box-shadow: 10px 10px 5px grey;
+}
+

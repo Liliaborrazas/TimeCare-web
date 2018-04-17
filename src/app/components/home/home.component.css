@@ -7,3 +7,10 @@
     font-size: 150px;
 
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    z-index: -2;
+    min-width: 100%;
+}

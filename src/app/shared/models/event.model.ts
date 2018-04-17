@@ -6,6 +6,8 @@ export class Event {
     creator: Array<string>;
     startTime: string;
     endTime: string;
+    phone: number;
+    email: string;
 }
     
    
