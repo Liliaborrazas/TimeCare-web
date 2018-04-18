@@ -27,6 +27,7 @@ import { EventService } from './shared/services/event.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MapsComponent } from './components/maps/maps.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     ListComponent,
     MapsComponent,
     ProfileComponent,
+    UserComponent,
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,
@@ -55,6 +58,7 @@ import { ProfileComponent } from './components/profile/profile.component';
   ],
   providers: [ SessionService, 
   UsersService, EventService,
+
   {
     provide: ErrorHandler,
     useClass: GlobalErrorHandlerService

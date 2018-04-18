@@ -12,7 +12,8 @@
         <p> Days:{{ event.days }} </p>
         <p> StartTime: {{ event.startTime }} </p>
         <p> EndTime: {{ event.endTime }} </p>
-        <a [routerLink]="['/event', event.id]"> Ver mas... </a>
+        <p> Email: {{ event.email }}</p>
+        <a [routerLink]="['/user', event.creator]"> Dejar Valoración </a>
     </div>
   </div>
  </div>

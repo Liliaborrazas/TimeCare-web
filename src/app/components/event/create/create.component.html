@@ -53,14 +53,6 @@
               </ul>
             </div>
 
-            <div class="form-group">
-                <label for="endTime">Phone</label>
-                <input type="number" class="form-control" name="phone" [(ngModel)]="event.phone" #phone="ngModel" placeholder="(0034)"required>
-                  <ul *ngIf="phone.errors && phone.touched">
-                  <li *ngIf="phone.errors.required">Required</li>
-                </ul>
-              </div>
-
               <div class="form-group">
                   <label for="endTime">Email</label>
                   <input type="text" class="form-control" name="email" [(ngModel)]="event.email" #email="ngModel"placeholder="@email.com" required>

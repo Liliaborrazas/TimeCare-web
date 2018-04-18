@@ -6,7 +6,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { Routes } from '@angular/router';
 import { CreateComponent } from './components/event/create/create.component';
 import { ListComponent } from './components/event/list/list.component';
-
+import { UserComponent } from './components/user/user.component';
 
 
 
@@ -17,6 +17,7 @@ export const routes: Routes =[
     { path: 'event/create', component: CreateComponent},
     { path: 'event/list', component: ListComponent},
     { path: 'profile',component: ProfileComponent},
+    { path: 'user/:id', component: UserComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full'}
 
 

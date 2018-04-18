@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="city">city</label>
-            <input type="city" class="form-control" name="city" [(ngModel)]="user.city" #city="ngModel" placeholder="La Habana" required>
+            <input type="text" class="form-control" name="city" [(ngModel)]="user.city" #city="ngModel" placeholder="La Habana" required>
               <ul *ngIf="city.errors && city.touched">
               <li *ngIf="city.errors.required">Required</li>
             </ul>
