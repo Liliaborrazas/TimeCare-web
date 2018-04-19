@@ -4,7 +4,7 @@
                     <div class="row profile">
                             <div class="col-sm">
                                     <div class="content-wrapper-div hero-title-div alert-info info">
-                                        <h1 class="text-center">Welcome {{ sessionService.user.name }}</h1>
+                                        <h1 class="text-center title">Welcome {{ sessionService.user.name }}</h1>
                                         <h3 id="hero-title"><strong>Datos Personales</strong></h3>
                                         <h5>Name: <span class="data">{{ sessionService.user.name }}</span> </h5> 
                                         <h5>Rol: <span class="data">{{ sessionService.user.role }}</span> </h5>
@@ -14,9 +14,9 @@
                     </div>
             
                     <div class="content-wrapper-div profile-buttons">
-                            <button type="button" class="btn btn-lg btn-success" [routerLink]="['/event/create']">Crear Evento</button>
-                            <button type="button" class="btn btn-lg btn-secondary" [routerLink]="['/event/list']">Listar Eventos</button>      
-                            <button type="button" class="btn btn-lg btn-danger" >Editar Perfil</button>
+                            <button type="button" class="btn btn-lg btn-info" [routerLink]="['/event/create']">Crear Evento</button>
+                            <button type="button" class="btn btn-lg btn-warning" [routerLink]="['/event/list']">Listar Eventos</button>      
+                            <button type="button" class="btn btn-lg btn-secondary" >Editar Perfil</button>
                     </div>
                 </div>
         </div>

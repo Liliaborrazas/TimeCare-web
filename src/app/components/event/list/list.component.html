@@ -9,7 +9,7 @@
     <div class="card-body">
         <p> Description:{{ event.description }} </p>
         <p> Price: {{ event.price }} </p>
-        <p> Days:{{ event.days }} </p>
+        <p> Days:{{ event.days | date:'mediumDate' }} </p>  
         <p> StartTime: {{ event.startTime }} </p>
         <p> EndTime: {{ event.endTime }} </p>
         <p> Email: {{ event.email }}</p>
@@ -19,7 +19,7 @@
  </div>
 
   <div class="btn-wrapper" >
-  <button type="button" class="btn btn-lg btn-success" [routerLink]="['/event/create']">Crear Evento</button>
+  <button type="button" class="btn btn-lg btn-info" [routerLink]="['/event/create']">Crear Evento</button>
   <button type="button" class="btn btn-warning" [routerLink]="['/profile']"> Perfil </button>
   </div>
   </div>

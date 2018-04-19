@@ -29,7 +29,7 @@ import { MapsComponent } from './components/maps/maps.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserComponent } from './components/user/user.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { DataPipe } from './data.pipe';
+
 
 @NgModule({
   declarations: [
@@ -44,10 +44,12 @@ import { DataPipe } from './data.pipe';
     ProfileComponent,
     UserComponent,
     UserListComponent,
-    DataPipe,
+    
+   
   ],
   imports: [
   
+
   BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,

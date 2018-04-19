@@ -2,5 +2,11 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body {
-    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/08/25/2257befafd21af1.jpg")
+    background-image: url("http://inukhome.com/blog/wp-content/uploads/2016/09/papel-pintado-mapa-amb.jpg");
+    background-size: cover;
+    position: absolute;
+    min-width: 100%;
+    
+    border-style: none;
+    z-index: -2;
 }  
