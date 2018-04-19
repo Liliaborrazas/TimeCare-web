@@ -46,7 +46,7 @@ export class UserComponent implements OnInit {
     this.eventService.createValoration(this.valoration, this.receptorId).subscribe( event => {
         this.event = event;
         console.log(this.valoration);
-        this.router.navigate(['event/list']);
+        this.router.navigate(['valorations',this.user.id]);
     })
   }
 
