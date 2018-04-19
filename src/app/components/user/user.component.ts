@@ -6,6 +6,7 @@ import { SessionService } from '../../shared/services/session.service';
 import { UsersService } from '../../shared/services/users.service';
 import { EventService } from '../../shared/services/event.service';
 import { ActivatedRoute } from '@angular/router';
+import { Valoration } from '../../shared/models/valoration.model';
 
 @Component({
   selector: 'app-user',
@@ -15,20 +16,26 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   event = new Event();
+  valoration = new Valoration();
   receptorId: string;
   eventId: string;
+  user = new User();
 
   constructor(
     private router: Router, 
     private routes:ActivatedRoute,
     private usersService: UsersService,
-    private eventService: EventService
+    private eventService: EventService,
+    private sessionService: SessionService
     
   ) { 
     this.routes.params.subscribe(params => {
       this.receptorId = params.id;
+      this.eventService.get(this.receptorId).subscribe( event => {
+        this.event = event
+      })
     })
-    
+    this.user = this.sessionService.getUser()
   }
 
   ngOnInit() {
@@ -36,6 +43,11 @@ export class UserComponent implements OnInit {
   }
 
   onSubmitValorationForm() { 
+    this.eventService.createValoration(this.valoration, this.receptorId).subscribe( event => {
+        this.event = event;
+        console.log(this.valoration);
+        this.router.navigate(['event/list']);
+    })
   }
 
 }

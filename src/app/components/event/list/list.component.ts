@@ -11,12 +11,12 @@ import { EventService } from '../../../shared/services/event.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  event: Array<Event> = [];
+  events: Array<Event> = [];
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
     this.eventService.list()
-      .subscribe((event) => this.event = event);
+      .subscribe((events) => this.events = events);
   }
   }
 

@@ -8,7 +8,7 @@ import { CreateComponent } from './components/event/create/create.component';
 import { ListComponent } from './components/event/list/list.component';
 import { UserComponent } from './components/user/user.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-
+import { ValorationListComponent } from './components/valoration-list/valoration-list.component';
 
 export const routes: Routes =[
     { path: 'home', component: HomeComponent },
@@ -16,7 +16,9 @@ export const routes: Routes =[
     { path: 'signup', component: SignupComponent },
     { path: 'event/create', component: CreateComponent},
     { path: 'event/list', component: ListComponent},
+    { path: 'valorations/:id', component: ValorationListComponent},
     { path: 'profile',component: ProfileComponent},
+   // { path: 'user/:idUser/:idCreator', component: UserComponent},
     { path: 'user/:id', component: UserComponent},
     { path: 'user-list', component: UserListComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full'}

@@ -3,18 +3,20 @@
       <i class="fa fa-plus"></i>
     </a>
     <div class="card-columns">
-  <div  *ngFor="let event of event" class="card">
+  <div  *ngFor="let event of events" class="card">
       <h3 class="title"> {{ event.title }} </h3>
-      <img [src]="event.image" />
+      
     <div class="card-body">
-        <p> Description:{{ event.description }} </p>
-        <p> Price: {{ event.price }} </p>
-        <p> Days:{{ event.days | date:'mediumDate' }} </p>  
-        <p> StartTime: {{ event.startTime }} </p>
-        <p> EndTime: {{ event.endTime }} </p>
-        <p> Email: {{ event.email }}</p>
-        <a [routerLink]="['/user', event.creator]"> Dejar Valoración </a>
-    </div>
+        <p><span class="encabezado">Description:</span> {{ event.description }} </p>
+        <p><span class="encabezado">Price: </span>  {{ event.price }} </p>
+        <p><span class="encabezado">Day: </span>{{ event.days | date:'mediumDate' }} </p>  
+        <p><span class="encabezado">StartTime:</span>  {{ event.startTime }} </p>
+        <p><span class="encabezado">EndTime:</span>  {{ event.endTime }} </p>
+        <p><span class="encabezado">Email:</span>  {{ event.email }}</p>
+        <p><span class="encabezado">Valorations:</span>  {{ event.valorations && event.valorations.length }}</p>
+        <a [routerLink]="['/user', event.id]"> Dejar Valoración </a>
+        <a [routerLink]="['/valorations', event.id]"> Ver Valoraciones </a>
+      </div>
   </div>
  </div>
 

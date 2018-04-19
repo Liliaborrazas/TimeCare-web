@@ -4,7 +4,7 @@ export class Valoration {
     punctuality: number;
     trust: number;
     description: string;
-    userId: object;
+    userId: string;
 
 }
 

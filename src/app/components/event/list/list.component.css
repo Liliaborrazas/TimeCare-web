@@ -11,12 +11,12 @@ container {
 .text {
     text-align: center;
     color: black;
-    font-family: fantasy;
+   
     font-weight: 300;
 
 }
 .title {
-    font-family: fantasy;
+    
     margin-top: 20px;
 
 }
@@ -32,6 +32,9 @@ button {
 }
 a {
     color: orange;
+    font-weight: bold;
+}
+.encabezado {
     font-weight: bold;
 }
 

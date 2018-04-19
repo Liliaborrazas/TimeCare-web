@@ -29,6 +29,7 @@ import { MapsComponent } from './components/maps/maps.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserComponent } from './components/user/user.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ValorationListComponent } from './components/valoration-list/valoration-list.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
     ProfileComponent,
     UserComponent,
     UserListComponent,
+    ValorationListComponent,
     
    
   ],

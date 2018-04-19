@@ -5,7 +5,7 @@
 
      <div class="form-group">
      <label for="generalRating">GeneralRating </label>
-     <input type="number" class="form-control" name="generalRating" min="0" max="5" [(ngModel)]="user.generalRating" #generalRating="ngModel" placeholder="" required>
+     <input type="number" class="form-control" name="generalRating" min="0" max="5" [(ngModel)]="valoration.generalRating" #generalRating="ngModel" placeholder="" required>
      <ul *ngIf="generalRating.errors && generalRating.touched">
        <li *ngIf="generalRating.errors.required">Required</li>
        <li *ngIf="generalRating.errors.generalRating">not is an generalRating</li>
@@ -15,7 +15,7 @@
 
    <div class="form-group">
      <label for="valorationPrice">ValorationPrice</label>
-     <input type="number" class="form-control" name="valorationPrice" min="0" max="5" [(ngModel)]="user.valorationPrice" #valorationPrice="ngModel" placeholder="" required>
+     <input type="number" class="form-control" name="valorationPrice" min="0" max="5" [(ngModel)]="valoration.valorationPrice" #valorationPrice="ngModel" placeholder="" required>
        <ul *ngIf="valorationPrice.errors && valorationPrice.touched">
        <li *ngIf="valorationPrice.errors.required">Required</li>
      </ul>
@@ -24,7 +24,7 @@
 
    <div class="form-group">
       <label for="punctuality">Punctuality</label>
-      <input type="number" class="form-control" name="punctuality" min="0" max="5" [(ngModel)]="user.punctuality" #punctuality="ngModel" placeholder="" required>
+      <input type="number" class="form-control" name="punctuality" min="0" max="5" [(ngModel)]="valoration.punctuality" #punctuality="ngModel" placeholder="" required>
         <ul *ngIf="punctuality.errors && punctuality.touched">
         <li *ngIf="punctuality.errors.required">Required</li>
       </ul>
@@ -33,7 +33,7 @@
 
     <div class="form-group">
         <label for="trust">Trust</label>
-        <input type="number" class="form-control" name="trust" min="0" max="5" [(ngModel)]="user.trust" #trust="ngModel" placeholder="" required>
+        <input type="number" class="form-control" name="trust" min="0" max="5" [(ngModel)]="valoration.trust" #trust="ngModel" placeholder="" required>
           <ul *ngIf="trust.errors && trust.touched">
           <li *ngIf="trust.errors.required">Required</li>
         </ul>
@@ -43,7 +43,7 @@
 
       <div class="form-group">
           <label for="description">Description</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" [(ngModel)]="event.description" #description="ngModel" required></textarea> 
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" [(ngModel)]="valoration.description" #description="ngModel" required></textarea> 
             <ul *ngIf="description.errors && description.touched">
             <li *ngIf="description.errors.required">Required</li>
           </ul>
@@ -51,7 +51,7 @@
 
 
     <div class="justify-content-center d-flex">
-      <button type="submit" class="btn btn-primary btn-block" [disabled]="!signupForm.valid">Dejar Valoracion</button>
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="!valorationForm.valid">Dejar Valoracion</button>
       <p *ngIf="error">{{ error }}</p>  
     </div>
  </form>

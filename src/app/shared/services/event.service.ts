@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, RequestMethod } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Event } from '../models/event.model';
+import { Valoration } from '../models/valoration.model';
 
 @Injectable()
 export class EventService extends BaseApiService {
@@ -26,13 +27,18 @@ export class EventService extends BaseApiService {
   }
 
   create(event: Event): Observable<Event> {
-    return this.http.post(EventService.EVENT_API, event, new RequestOptions({ withCredentials: true }))
+    return this.http.post(EventService.EVENT_API, event, BaseApiService.defaultOptions)
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }
 
   edit(event: Event): Observable<Event> {
-    return this.http.put(EventService.EVENT_API, event, new RequestOptions({ withCredentials: true }))
+    return this.http.put(EventService.EVENT_API, event, BaseApiService.defaultOptions)
+      .map((res: Response) => res.json())
+      .catch(error => this.handleError(error));
+  }
+  createValoration(valoration: Valoration, id: string): Observable<Event> {
+    return this.http.post(`${EventService.EVENT_API}/valorate/${id}`, valoration, BaseApiService.defaultOptions)
       .map((res: Response) => res.json())
       .catch(error => this.handleError(error));
   }
