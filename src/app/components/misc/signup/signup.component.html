@@ -2,6 +2,7 @@
     <div class="row justify-content-center">
      <div class="col-xs-12 col-sm-4 col-sm-offset-4 form-background">
      <form (ngSubmit)="onSubmitSignupForm()" #signupForm="ngForm">
+       
        <div class="form-group">
        <label for="email">Email </label>
        <input type="email" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" placeholder="youremail@service.ex" required email>

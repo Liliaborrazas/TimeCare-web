@@ -11,12 +11,12 @@ container {
 .text {
     text-align: center;
     color: black;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: fantasy;
     font-weight: 300;
 
 }
 .title {
-    font-family:'Patua One', cursive;
+    font-family: fantasy;
     margin-top: 20px;
 
 }

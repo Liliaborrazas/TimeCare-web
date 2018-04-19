@@ -28,6 +28,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MapsComponent } from './components/maps/maps.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UserComponent } from './components/user/user.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { DataPipe } from './data.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { UserComponent } from './components/user/user.component';
     MapsComponent,
     ProfileComponent,
     UserComponent,
+    UserListComponent,
+    DataPipe,
   ],
   imports: [
   
