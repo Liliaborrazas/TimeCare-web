@@ -21,7 +21,7 @@ export class SessionService {
     this.notifyUserChanges();
   }
 
-  authenticate(user: User): Observable<User> {
+  authenticate(user: any): Observable<User> {
     return this.http
       .post(SessionService.SESSION_API, JSON.stringify(user), SessionService.defaultOptions)
       .map(res => {

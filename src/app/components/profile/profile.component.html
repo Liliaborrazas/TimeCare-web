@@ -1,6 +1,6 @@
 <section>
         <div class="container">
-                <div class="content-wrapper">
+                <div *ngIf="sessionService && sessionService.user" class="content-wrapper">
                     <div class="row profile">
                             <div class="col-sm">
                                     <div class="content-wrapper-div hero-title-div alert-info info">
