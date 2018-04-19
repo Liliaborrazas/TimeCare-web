@@ -20,6 +20,8 @@ export class UserComponent implements OnInit {
   receptorId: string;
   eventId: string;
   user = new User();
+  apiError: string;
+
 
   constructor(
     private router: Router, 
@@ -47,7 +49,13 @@ export class UserComponent implements OnInit {
         this.event = event;
         console.log(this.valoration);
         this.router.navigate(['valorations',this.user.id]);
-    })
+    },
+  (error) => {
+    this.apiError = error.message;
   }
-
+)
+  }
 }
+
+
+

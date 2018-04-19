@@ -5,7 +5,6 @@ export class Valoration {
     trust: number;
     description: string;
     userId: string;
-
 }
 
 

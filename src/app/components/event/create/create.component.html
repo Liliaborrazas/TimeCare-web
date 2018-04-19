@@ -63,7 +63,7 @@
 
       <div class="justify-content-center d-flex">
         <button type="submit" class="btn btn-primary btn-block" [disabled]="!createForm.valid">Create</button>
-         <p *ngIf="error">{{ error }}</p>  
+         <p *ngIf="apiError">{{ apiError }}</p>  
       </div>
    </form>
    </div>

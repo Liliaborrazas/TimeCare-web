@@ -13,7 +13,7 @@ export class SessionService {
   private static defaultHeaders: Headers = new Headers({ 'Content-Type': 'application/json' });
   private static defaultOptions: RequestOptions = new RequestOptions({ headers: SessionService.defaultHeaders, withCredentials: true });
 
-  private user: User;
+  user: User;
   private userSubject: Subject<User> = new Subject();
   
   constructor(private http: Http) {

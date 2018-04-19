@@ -16,7 +16,7 @@ import { SessionService } from '../../shared/services/session.service';
 
 export class ProfileComponent{
 
-  constructor( private sessionService: SessionService ) { }
+  constructor( public sessionService: SessionService ) { }
 
   ngOnInit() {
   }
