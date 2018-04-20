@@ -7,14 +7,14 @@
       <h3 class="title"> {{ event.title }} </h3>
       
     <div class="card-body">
-        <p><span class="encabezado">Description:</span> {{ event.description }} </p>
-        <p><span class="encabezado">Price: </span>  {{ event.price }} </p>
-        <p><span class="encabezado">Day: </span>{{ event.days | date:'mediumDate' }} </p>  
-        <p><span class="encabezado">StartTime:</span>  {{ event.startTime }} </p>
-        <p><span class="encabezado">EndTime:</span>  {{ event.endTime }} </p>
-        <p><span class="encabezado">Email:</span>  {{ event.email }}</p>
+      <p><span class="encabezado">Email:</span>  {{ event.email }}</p>
+      <p><span class="encabezado">Price: </span>  {{ event.price }} </p>
+      <p><span class="encabezado">Day: </span>{{ event.days | date:'mediumDate' }} </p>  
+      <p><span class="encabezado">StartTime:</span>  {{ event.startTime }} </p>
+      <p><span class="encabezado">EndTime:</span>  {{ event.endTime }} </p>
+      <p><span class="encabezado">Description:</span> {{ event.description }} </p>
         <p><span class="encabezado">Valorations:</span>  {{ event.valorations && event.valorations.length }}</p>
-        <a [routerLink]="['/user', event.id]"> Dejar Valoración </a>
+        <a [routerLink]="['/user', event.id]"> Dejar Valoración </a> <br/>
         <a [routerLink]="['/valorations', event.id]"> Ver Valoraciones </a>
       </div>
   </div>
@@ -22,6 +22,6 @@
 
   <div class="btn-wrapper" >
   <button type="button" class="btn btn-lg btn-info" [routerLink]="['/event/create']">Crear Evento</button>
-  <button type="button" class="btn btn-warning" [routerLink]="['/profile']"> Perfil </button>
+
   </div>
   </div>

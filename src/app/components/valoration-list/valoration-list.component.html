@@ -1,16 +1,16 @@
-<div  *ngFor="let valoration of valorations" class="card">
-<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-  <div class="card-header">Valoracion</div>
-  <div class="card-body">
-    <h5 class="card-title">Email: {{ valoration.userId }}</h5>
-    <p class="card-text"><span class="encabezado">General Rating:</span> {{ valoration.generalRating }} </p>
-    <p class="card-text"><span class="encabezado">Valoration Price: </span>  {{ valoration.valorationPrice }} </p>
-    <p class="card-text"><span class="encabezado">Puntuality: </span>{{ valoration.puntuality }} </p>  
-    <p class="card-text"><span class="encabezado">Turst:</span>  {{ valoration.turst }} </p>
-    <p class="card-text"><span class="encabezado">Description:</span>  {{ valoration.description }} </p>
+<div class="container valoration-container">
+  <div class="row justify-content-center">
+      <div class="card text-white col-4" *ngFor="let valoration of valorations" style="max-width: 18rem;">
+        <div class="card-header bg-warning title">Valoración</div>
+        <div class="card-body bgCard ">
+          <p class="card-text"><span class="encabezado">General Rating:</span> {{ valoration.generalRating }} </p>
+          <p class="card-text"><span class="encabezado">Valoration Price: </span>  {{ valoration.valorationPrice }} </p>
+          <p class="card-text"><span class="encabezado">Punctuality:</span>{{ valoration.punctuality }}</p>  
+          <p class="card-text"><span class="encabezado">Trust:</span>{{ valoration.trust }}</p>
+          <p class="card-text"><span class="encabezado">Description:</span>{{ valoration.description }}</p>
+        </div>
+      </div>
   </div>
 </div>
 
-
-</div>
 

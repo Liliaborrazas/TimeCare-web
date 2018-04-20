@@ -1,3 +1,29 @@
+.bgCard {
+    background-color: rgb(203, 211, 212);
+    color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+.title {
+    font-weight: bold;
+    color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.valoration-container {
+    margin-top: 30px;
+}
+
 .card {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent !important;
+    border: 0 !important;
+    margin: 0 20px 30px 20px;
+    padding: 0;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 20px; 
+}
+.encabezado {
+    font-weight: bold;
+
 }
