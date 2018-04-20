@@ -1,3 +1,5 @@
+import { Valoration } from './valoration.model';
+
 export class Event {
     id: string;
     title: string;
@@ -8,6 +10,7 @@ export class Event {
     startTime: string;
     endTime: string;
     email: string;
+    valorations: Array<Valoration>
    
 }
     
