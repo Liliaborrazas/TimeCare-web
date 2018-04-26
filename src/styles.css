@@ -5,8 +5,17 @@ body {
     background-image: url("http://inukhome.com/blog/wp-content/uploads/2016/09/papel-pintado-mapa-amb.jpg");
     background-size: cover;
     position: absolute;
+    min-height: 100vh;
     min-width: 100%;
     
     border-style: none;
     z-index: -2;
 }  
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+
+}

@@ -30,6 +30,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { UserComponent } from './components/user/user.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { ValorationListComponent } from './components/valoration-list/valoration-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ValorationListComponent } from './components/valoration-list/valoration
     UserComponent,
     UserListComponent,
     ValorationListComponent,
+    FooterComponent,
     
    
   ],
